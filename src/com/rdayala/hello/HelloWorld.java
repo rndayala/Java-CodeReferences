@@ -4,7 +4,7 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 		System.out.println("Hello, World to Java!!");
-		System.out.println("Java Code Examples!!");
+		System.out.println("Java Code Examples Repository!!");
 	}
 
 }
