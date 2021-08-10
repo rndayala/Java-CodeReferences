@@ -1,0 +1,12 @@
+File name should be same as Class file name. 
+Typically, we will have one public class in a single file.
+
+If the class contains, main() method, then the file name "should" be same as class name.
+
+java.lang package is by default imported in all the source files.
+
+main() method should be of format :
+	public static void main(String[] args)
+	
+
+
