@@ -8,5 +8,15 @@ java.lang package is by default imported in all the source files.
 main() method should be of format :
 	public static void main(String[] args)
 	
+Example :
+----------
 
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		System.out.println("Hello, World to Java!!");
+		System.out.println("Java Code Examples Repository!!");
+	}
+
+}
 
