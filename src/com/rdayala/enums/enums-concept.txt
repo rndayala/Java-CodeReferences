@@ -1,0 +1,71 @@
+Enums -- to avoid int constants.
+
+	Enums introduced in Java 5.
+
+Before enums, people were using constants exporting classes to group together a set of constants in a class.
+These constants are resolved at compile time.
+
+Deficiencies of using constants exporting classes :
+
+Example of constants exporting class :
+
+public class Genre {
+	// Movie genre group
+	public static final int MOVIE_GENRE_HORROR = 0;
+	public static final int MOVIE_GENRE_DRAMA = 1;
+	
+	// Book genre group
+	public static final int BOOK_GENRE_BIOGRAPHY = 10;
+	public static final int BOOK_GENRE_HORROR = 11;
+	
+	// we dont want to instantiate this constants exporting class;
+	// so we make the constructor as private
+	private Genre() {}
+}
+
+1. No type safety. If a function is expecting MOVIE_GENRE_HORROR which is of type int, 
+we can be able to pass BOOK_GENRE_HORROR. No error will be thrown.
+2. these constants are compile time constants. So, when code is compiled and built, the constants are replaced with values.
+If any of the values get changed, they will not be reflected in code unless the client code is recompiled.
+3. No namespace protection
+4. We can't iterate over constants of a group
+
+
+Approach 1
+-----------
+
+instead of exporting all constants in a single file, we can break them.
+
+public class MovieGenre {
+	// Movie genre group
+	public static final int HORROR = 0;
+	public static final int DRAMA = 1;
+	
+	// we dont want to instantiate this constants exporting class;
+	// so we make the constructor as private
+	private MovieGenre() {}
+}
+
+public class BookGenre {
+	// Book genre group
+	public static final int BIOGRAPHY = 10;
+	public static final int HORROR = 11;
+	
+	// we dont want to instantiate this constants exporting class;
+	// so we make the constructor as private
+	private BookGenre() {}
+}
+
+The above approach takes care of namespace problem; but it still has type safety issue.
+
+Simpler solution 
+-----------------
+
+The idea is to use enums.
+
+enum BookGenre { BIOGRAPHY, HORROR }
+
+An enum is not extendable.
+
+
+
