@@ -19,6 +19,7 @@ public class Book {
 			return minAgeToRead;
 		}
 		
+		// using enum in switch statement
 		public boolean isKidFriendly(int age) {
 			switch(this) {
 			case BIOGRAPHY:
