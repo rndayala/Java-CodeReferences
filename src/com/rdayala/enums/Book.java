@@ -39,7 +39,7 @@ public class Book {
 			System.out.println(", compareTo(HORROR) : " + bookGenre.compareTo(Book.BookGenere.HORROR));
 			System.out.println(", equals(HORROR) : " + bookGenre.equals(Book.BookGenere.HORROR));
 			System.out.println(", minAgeToRead : " + bookGenre.getMinAgeToRead()); // getting state of enum object
-			System.out.println(", isKidFriendly : " + bookGenre.isKidFriendly(13));
+			System.out.println(", isKidFriendly : " + bookGenre.isKidFriendly(14));
 		}
 	}
 	
