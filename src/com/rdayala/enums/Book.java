@@ -17,7 +17,17 @@ public class Book {
 		private int minAgeToRead;
 		public int getMinAgeToRead() {
 			return minAgeToRead;
-		}		
+		}
+		
+		public boolean isKidFriendly(int age) {
+			switch(this) {
+			case BIOGRAPHY:
+				return age >= minAgeToRead;
+			case HORROR:
+				return age >= minAgeToRead;
+			}
+			return false;
+		}
 	}
 	
 	public static void main(String[] args) {
@@ -29,6 +39,7 @@ public class Book {
 			System.out.println(", compareTo(HORROR) : " + bookGenre.compareTo(Book.BookGenere.HORROR));
 			System.out.println(", equals(HORROR) : " + bookGenre.equals(Book.BookGenere.HORROR));
 			System.out.println(", minAgeToRead : " + bookGenre.getMinAgeToRead()); // getting state of enum object
+			System.out.println(", isKidFriendly : " + bookGenre.isKidFriendly(13));
 		}
 	}
 	
