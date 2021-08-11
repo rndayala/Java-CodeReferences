@@ -463,10 +463,65 @@ public class Book {
 
 <br>
 <br>
+
+
+<hr>
+
+<br>
+
+<p>
+enums - in context of constants behavior
+</p>
+
+<p>
+How do we use enums where constants are expected.<br>
+<ol type="1" start="1">
+<li>One use case is, using enums in switch statements.</li>
+</ol>
+</p>
+
+<p>
+<img src="./enums_files/pasted_image017.png">
+</p>
+
+<p>
+The problem with above approach is, if we add a new enum constant, then we have to change the code in switch block to add the case for new enum constant. If developer forgets to add the new enum constant in swith case, it will be default return false.
+</p>
+
+<p>
+One solution to above problem is, have an <tt>abstract method</tt> in enum type and the method is <tt>overridden</tt> by each enum constant. This way, if developer adds any new enum constant to enum type, it becomes mandatory to implement the abstract method. With this approach, the enum type no longer a final class.
+</p>
+
+<p>
+<img src="./enums_files/pasted_image018.png">
+</p>
+
 <br>
 <br>
 <br>
 <br>
+
+
+<hr>
+
+<br>
+
+<p>
+Review questions :
+</p>
+
+<p>
+<div style='padding-left: 30pt'>
+Which of the following is true about an enum? — Enum is essentially a class with fixed set of constants.<br>
+An enum is instantiable. True/False? — False<br>
+An enum is extendible. True/False? — False<br>
+What happens if we invoke clone() on an enum constant? — throws CloneNotSupported exception<br>
+If you define a constructor in an enum, then by default which of the following access levels does it have? — private access specifier<br>
+An enum can have static members. True/False? — True<br>
+A nested enum is translated into which of the following nested classes? — static member class, but not instantiable.
+</div>
+</p>
+
 <br>
 <br>
 <br>
@@ -552,6 +607,12 @@ public class Book {
 
 
 			<tr><td><a href='./enums_files/pasted_image016.png'>pasted_image016.png</a></td><td>&nbsp;</td><td>75.7kb</td></tr>
+
+
+			<tr><td><a href='./enums_files/pasted_image017.png'>pasted_image017.png</a></td><td>&nbsp;</td><td>249kb</td></tr>
+
+
+			<tr><td><a href='./enums_files/pasted_image018.png'>pasted_image018.png</a></td><td>&nbsp;</td><td>371kb</td></tr>
 
 			</table>
 	</div>
